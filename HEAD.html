@@ -53,6 +53,16 @@
       line-height: 1.6;
       color: #424242;
     }
+    /* Re-declared explicitly on children: HubSpot's theme h1-h6 rules
+       will override the wrapper-level font-family above otherwise. */
+    .applied-landing-page h1, .applied-landing-page h2, .applied-landing-page h3,
+    .applied-landing-page h4, .applied-landing-page h5, .applied-landing-page h6,
+    .applied-landing-page p,
+    .applied-landing-page .applied-cta-button,
+    .applied-landing-page .carousel-btn,
+    .applied-landing-page .applied-tab {
+      font-family: "din-2014", "DIN 2014", "DIN Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
     /* ========================================
        GLOBAL ANIMATIONS
        Reusable across all modules
