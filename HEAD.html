@@ -53,16 +53,6 @@
       line-height: 1.6;
       color: #424242;
     }
-    /* Re-declared explicitly on children: HubSpot's theme h1-h6 rules
-       will override the wrapper-level font-family above otherwise. */
-    .applied-landing-page h1, .applied-landing-page h2, .applied-landing-page h3,
-    .applied-landing-page h4, .applied-landing-page h5, .applied-landing-page h6,
-    .applied-landing-page p,
-    .applied-landing-page .applied-cta-button,
-    .applied-landing-page .carousel-btn,
-    .applied-landing-page .applied-tab {
-      font-family: "din-2014", "DIN 2014", "DIN Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
     /* ========================================
        GLOBAL ANIMATIONS
        Reusable across all modules
@@ -755,7 +745,7 @@
   }
   .applied-capabilities-title h2 {
     font-size: 42px;
-    font-weight: 800;
+    font-weight: 700;
     color: #ffffff;
     margin: 0 0 14px 0;
     letter-spacing: -0.02em;
@@ -804,7 +794,7 @@
   }
   .applied-capability-header h3 {
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     color: #000000;
     margin: 0;
     line-height: 1.25;
@@ -946,5 +936,16 @@
     .applied-capability-list--columns {
       grid-template-columns: 1fr;
     }
+  }
+</style>
+<!-- Font-stick rule: must stay the LAST style block in HEAD.html so it wins
+     ties against HubSpot's own per-tag theme font rules. Do not hand-list
+     tags here (h1-h6, p, span...) — this universal form is the one that
+     doesn't miss strong/span/sup/td/etc. Inline style="font-family:..."
+     still beats this, so keep those on the din-2014 stack too. -->
+<style>
+  .applied-landing-page,
+  .applied-landing-page * {
+    font-family: "din-2014", "DIN 2014", "DIN Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 </style>
